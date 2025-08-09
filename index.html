@@ -76,6 +76,32 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      position: relative;
+    }
+
+    .flame-emoji {
+      display: inline-block;
+      animation: flameFlicker 0.8s ease-in-out infinite alternate;
+      transform-origin: center bottom;
+    }
+
+    @keyframes flameFlicker {
+      0%, 100% { 
+        transform: scale(1) rotate(-5deg);
+        text-shadow: 0 0 10px #ff3d00, 0 0 20px #ff9800;
+      }
+      25% { 
+        transform: scale(1.1) rotate(0deg);
+        text-shadow: 0 0 15px #ff3d00, 0 0 25px #ff9800, 0 0 35px #ffeb3b;
+      }
+      50% { 
+        transform: scale(1.05) rotate(5deg);
+        text-shadow: 0 0 12px #ff3d00, 0 0 22px #ff9800;
+      }
+      75% { 
+        transform: scale(1.15) rotate(0deg);
+        text-shadow: 0 0 18px #ff3d00, 0 0 28px #ff9800, 0 0 38px #ffeb3b;
+      }
     }
 
     header p {
@@ -242,7 +268,7 @@
 
   <div class="page-wrapper">
     <header>
-      <h1>🔥 Trusted Rummy Apps 🔥</h1>
+      <h1><span class="flame-emoji">🔥</span> Trusted Rummy Apps <span class="flame-emoji">🔥</span></h1>
       <p>Play the most exciting and rewarding rummy games online!</p>
     </header>
 
