@@ -30,13 +30,29 @@
 
     header {
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px 40px;
     }
 
-    header h1 {
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .logo-line1 {
       font-size: 3.5em;
-      margin: 0;
-      text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: #00ffcc;
+      text-shadow: 0 0 15px rgba(0, 255, 204, 0.7);
+      margin-bottom: -10px;
+    }
+
+    .logo-line2 {
+      font-size: 4em;
+      font-weight: 700;
+      letter-spacing: 3px;
       background: linear-gradient(90deg, #00ffcc, #0088ff);
       -webkit-background-clip: text;
       background-clip: text;
@@ -119,7 +135,10 @@
 <body>
   <div class="page-wrapper">
     <header>
-      <h1>Trusted Rummy Apps</h1>
+      <div class="logo">
+        <div class="logo-line1">TRUSTED</div>
+        <div class="logo-line2">RUMMY APPS</div>
+      </div>
       <p>Play the most exciting and rewarding rummy games online!</p>
     </header>
 
