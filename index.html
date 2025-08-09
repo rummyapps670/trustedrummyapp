@@ -231,4 +231,30 @@
     <footer>
       © 2025 Trusted Rummy Apps. All rights reserved.
     </footer>
-  </div
+  </div>
+
+  <script>
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loader');
+      // Add slight delay for smoother transition
+      setTimeout(() => {
+        loader.classList.add('hidden');
+      }, 500); // 500ms delay matches the CSS transition duration
+      
+      // Fallback in case load event doesn't fire
+      setTimeout(() => {
+        if (!loader.classList.contains('hidden')) {
+          loader.classList.add('hidden');
+        }
+      }, 3000); // Maximum 3 seconds then force hide
+    });
+
+    // Alternative for faster perceived loading
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(() => {
+        document.getElementById('loader').classList.add('hidden');
+      }, 300);
+    });
+  </script>
+</body>
+</html>
